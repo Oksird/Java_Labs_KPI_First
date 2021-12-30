@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Main {
     /*
-
     Написати програму на мові Java, яка рекурсивно обробляє вказану/введену з
     клавіатури директорію згідно варіанту (таблиця), запускаючи для обробки кожної її
     піддиректорії окремий потік та використовуючи для цього можливості executors.
@@ -13,7 +12,6 @@ public class Main {
     вмісту за зростанням. Відсортовані файли записати до нової директорії
      */
     public static void main(String[] args) throws IOException {
-        Scanner scanner = new Scanner(System.in);
 
         Sorter sorter = new Sorter();
 
@@ -32,10 +30,6 @@ public class Main {
         File third = new File(thirdName);
         File fourth = new File(fourthName);
 
-        File firstNew = new File(firstNewName);
-        File secondNew = new File(secondNewName);
-        File thirdNew = new File(thirdNewName);
-        File fourthNew = new File(fourthNewName);
 
         try {
             first.createNewFile();
@@ -63,7 +57,7 @@ public class Main {
         try{
             FileWriter fileWriter = new FileWriter(filename);
             for (int i = 0; i < 100; i++) {
-                fileWriter.append(Integer.toString(random.nextInt(100))+" ");
+                fileWriter.append(Integer.toString(random.nextInt(100))).append(" ");
             }
             fileWriter.flush();
             fileWriter.close();
